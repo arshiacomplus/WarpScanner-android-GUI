@@ -435,10 +435,10 @@ class MyApp(toga.App):
                     @retry(stop_max_attempt_number=3, wait_fixed=2000, retry_on_exception=lambda x: isinstance(x, ConnectionError))
                     def file_o():
                             try:
-                                response = requests.get("http://91.185.186.151:1074/", timeout=30)
+                                response = requests.get("", timeout=30)
                                 return response.text
                             except Exception:
-                                response = requests.get("http://91.185.186.151:1074/", timeout=30)
+                                response = requests.get("", timeout=30)
                                 return response.text
                   
                     b=file_o()
